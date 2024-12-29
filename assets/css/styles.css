@@ -20,11 +20,14 @@ body {
 }
 
 .navbar-links {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     list-style: none;
     display: flex;
     gap: 20px;
-    align-items: center;
-    text-align: center;
 }
 
 .navbar-links li {
@@ -67,19 +70,81 @@ body {
 }
  /* End Navbar */
 
+ .custom-toolbar {
+    width: 100%;
+    background-color: #f6f6f6;
+    border-bottom: inset;
+    border-bottom-width: 1px;
+    color: #000000;
+    line-height: 50px;
+}
+
+.application-main {
+    display: grid;
+    grid-template-rows: min-content auto 40px;
+    height: 95%;
+    width: 100%;
+}
+
+.application-header {
+    height: min-content;
+}
+
+.application-body {
+    height: 100%;
+    width: auto;
+    overflow: auto;
+    padding: 50px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.k-d-flex {
+    display: flex;
+  }
+  
+  .k-align-items-center {
+    align-items: center;
+  }
+  
+  .k-justify-content-center {
+    justify-content: center;
+  }
+
+  .k-mr-sm {
+    margin-right: 0.5rem; /* Adjust the size to your preference */
+  }
+  
+  .k-ml-sm {
+    margin-left: 0.5rem; /* Adjust the size to your preference */
+  }
+
  /* Footer */
  .application-footer {
-    height: 60px;
-    background-color: white;
-    max-width: 100%;
-    font-size: 14px;
-    position: relative !important;
-    bottom: 0;
-    z-index: -1;
-    margin-top: 20px;
-    padding: 0px 20px;
-    border-width: 1px 0px 0px 0px;
-    border-color: rgba(0, 0, 0, 0.08);
-    border-style: solid;
-}
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;    /* Center content vertically */
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px;          /* Optional: Adds spacing */
+    background-color: #f8f9fa; /* Optional: Light gray background */
+    text-align: center;      /* Ensures text aligns properly */
+  }
+  
+  .application-footer .k-d-flex {
+    display: flex;
+    justify-content: center; /* Align logos horizontally */
+    align-items: center;    /* Align logos vertically */
+    flex-wrap: wrap;        /* Allows wrapping if necessary */
+    gap: 10px;              /* Adds space between logos */
+    margin-bottom: 10px;    /* Adds space between logos and text */
+  }
+  
+  .application-footer img {
+    margin: 0 10px; /* Ensures consistent spacing between logos */
+  }
+  
+  .application-footer span {
+    font-size: 14px; /* Optional: Adjust font size */
+  }
+  
  /* End footer */
